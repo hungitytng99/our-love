@@ -1,0 +1,56 @@
+:root {
+    --light: rgb(255, 255, 255);
+    --dark: #28292c;
+    overflow: hidden;
+}
+
+.toggle-switch {
+    width: 100px;
+    height: 50px;
+    transition: all 0.4s;
+    margin-bottom: 25px;
+}
+
+label.toggle-switch__box {
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+input.toggle-switch__input {
+    position: absolute;
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    transition: 0.3s;
+    border: 1px solid #000;
+}
+
+input.toggle-switch__input:checked~.slider {
+    background-color: var(--light);
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 12px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+    box-shadow: inset 20px -2px 0px 0px var(--light);
+    transition: 0.3s;
+}
+
+input.toggle-switch__input:checked~.slider::before {
+    transform: translateX(45px);
+    background-color: var(--dark);
+    box-shadow: none;
+}

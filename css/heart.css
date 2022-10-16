@@ -1,0 +1,93 @@
+#heart {
+    position: absolute;
+    top: 355px;
+    left: calc( 50% - 120px);
+    transform: translateX(200px);
+    width: 300px;
+    height: 240px;
+    animation: heartbeat 2s infinite;
+    user-select: none;
+}
+
+#heart #time {
+    color: white;
+    font-size: 40px;
+    position: absolute;
+    z-index: 900;
+    top: 50%;
+    left: 50%;
+    width: 250px;
+    transform: translate(-50%, -90%);
+    text-align: center;
+    transition: all 1s;
+}
+
+#heart {
+    cursor: pointer;
+}
+
+#heart .rose {
+    width: 40px;
+    position: absolute;
+    top: -20px;
+    right: 40px;
+    z-index: 900;
+}
+
+#heart:before,
+#heart:after {
+    position: absolute;
+    content: "";
+    left: 150px;
+    top: 0;
+    width: 150px;
+    height: 240px;
+    background: #C21010;
+    -moz-border-radius: 150px 150px 0 0;
+    border-radius: 150px 150px 0 0;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    -o-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+}
+
+#heart:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+    -moz-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    -o-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale( .96);
+    }
+    20% {
+        transform: scale( 1);
+    }
+    40% {
+        transform: scale( .96);
+    }
+    60% {
+        transform: scale( 1);
+    }
+    80% {
+        transform: scale( .96);
+    }
+    100% {
+        transform: scale( .96);
+    }
+}
