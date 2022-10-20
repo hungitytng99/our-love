@@ -7,7 +7,6 @@ let LIST_SONGS = [
 ];
 
 LIST_SONGS = shuffle(LIST_SONGS);
-// let currentSongIndex = getRandomArbitrary(0, LIST_SONGS.length - 1);
 
 $(function () {
   var playerTrack = $("#player-track"),

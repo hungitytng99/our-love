@@ -183,6 +183,7 @@ function initApp() {
 
   $("#male_age").html(`${new Date().getFullYear() - 1999}`);
   $("#female_age").html(`${new Date().getFullYear() - 2002}`);
+  $("#canvas").css("display", "block");
 
   // TODO
   updateViewTimeMode({ hasChangedStatus: false });
